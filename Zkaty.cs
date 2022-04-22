@@ -2,10 +2,11 @@ using System;
 
 public class Zkaty
 {
-    public static void Main(string[] args)
+    public static void Main(string[] args) // main metod
     {
+        // creating variable
         int typee;
-        double crops;
+        double crops; 
         double cach;
         double silver;
         double gold=75938; //gold price
@@ -19,91 +20,91 @@ public class Zkaty
 
       
         
-        Console.WriteLine("\t\tZKATY");
-        Console.WriteLine("\ttypes");
-        Console.WriteLine("press 1 for crops");
-        Console.WriteLine("press 2 for cach");
-        Console.WriteLine("press 3 for silver or gold ");
-    loop1:
-        Console.Write("\nwhat is your type?    ");
-        typee=Convert.ToInt32(Console.ReadLine());
-        if (typee==1)
+        Console.WriteLine("\t\tZKATY");// output massage
+        Console.WriteLine("\ttypes"); // output massage
+        Console.WriteLine("press 1 for crops"); // output massage
+        Console.WriteLine("press 2 for cach"); // output massage
+        Console.WriteLine("press 3 for silver or gold "); // output massage
+    loop1: // creating loop
+        Console.Write("\nwhat is your type?    "); // aske user to input the type he asked for
+        typee=Convert.ToInt32(Console.ReadLine()); // save the data in a variable
+        if (typee==1) // if condition
                    {
                     
-                    Console.WriteLine("If you water it by Rains press 1 ");
-                    Console.WriteLine("If you water it  Manully press 2 ");
-                    Console.Write("How do you water it?       ");
-                    typefc=Convert.ToInt32(Console.ReadLine());
-                         if(typefc==1)
+                    Console.WriteLine("If you water it by Rains press 1 ");// output massage
+                    Console.WriteLine("If you water it  Manully press 2 ");// output massage
+                    Console.Write("How do you water it?       ");// aske user to input the type of how he water it
+                    typefc=Convert.ToInt32(Console.ReadLine()); // save the data in a variable
+                         if(typefc==1) // if condition
                         {
                          
-                          Console.Write("how many kilos do you have?  ");
-                          kr=Convert.ToInt32(Console.ReadLine());
+                          Console.Write("how many kilos do you have?  "); // aske user to input the amount of crops
+                          kr=Convert.ToInt32(Console.ReadLine()); // save the data in a variable
                           if (kr<612)
                              {
-                             Console.WriteLine("You dont have to pay Zakah");
-                             goto loop1;
+                             Console.WriteLine("You dont have to pay Zakah");// output massage
+                             goto loop1; // back to the loop to use the program again
                              }else
                              {
-                                result=(float)(10/kr*100) ;
-                                Console.WriteLine("10/{0}*100={1}",kr,result);
-                                goto loop1;
+                                result=(float)(10/kr*100) ; //mathematical operation
+                                Console.WriteLine("10/{0}*100={1}",kr,result); // output massage
+                                goto loop1;// back to the loop to use the program again
                              }
                              }else if (typefc==2)
                               {
                               
-                               Console.Write("how many kilos do you have?    ");
-                               km=Convert.ToInt32(Console.ReadLine());
-                               goto loop1;
+                               Console.Write("how many kilos do you have?    "); // aske user to input the amount of crops
+                               km=Convert.ToInt32(Console.ReadLine());// save the data in a variable
+                               goto loop1;// back to the loop to use the program again
                              if (km<612)
                               {
-                              Console.WriteLine("You dont have to pay Zakah");
-                              goto loop1;
+                              Console.WriteLine("You dont have to pay Zakah");// output massage
+                              goto loop1;// back to the loop to use the program again
                              }else
                                  {
-                              result=(float)(5/km*100) ;
-                              Console.WriteLine("5/{0}*100={1}",km,result);
-                              goto loop1;
+                              result=(float)(5/km*100) ; //mathematical operation
+                              Console.WriteLine("5/{0}*100={1}",km,result);// output massage
+                              goto loop1;// back to the loop to use the program again
                             }
                               }
 
         } else if(typee==2)
                          {
-                           Console.WriteLine("*note* cach must be more than {0} ",gold);
-                           Console.Write("How much do you have?     ");
-                           cach=Convert.ToInt32(Console.ReadLine());
+                           Console.WriteLine("*note* cach must be more than {0} ",gold);// output massage
+                           Console.Write("How much do you have?     ");// aske user to input how much does he have
+                           cach=Convert.ToInt32(Console.ReadLine());// save the data in a variable
                            if (cach<gold)
                             {
-                             Console.WriteLine("You dont have to pay Zakah");
-                             goto loop1;
+                             Console.WriteLine("You dont have to pay Zakah");// output massage
+                             goto loop1;// back to the loop to use the program again
                             }else
                                  {
-                                   result=(float)(cach/gold*100);
-                                   Console.WriteLine("{0}/{1}*100={2}",cach,gold,result);
-                                   goto loop1;
+                                   result=(float)(cach/gold*100); //mathematical operation
+                                   Console.WriteLine("{0}/{1}*100={2}",cach,gold,result);// output massage
+                                   goto loop1;// back to the loop to use the program again
                                  }
             
         }else if (typee==3)
                         {
-                            Console.Write("How many grams do you have?       ");
-                            silver=Convert.ToInt32(Console.ReadLine());
+                            Console.Write("How many grams do you have?       "); // aske user to input how much does he have
+                            silver=Convert.ToInt32(Console.ReadLine());// save the data in a variable
                             if (silver<gold)
                         {
-                           Console.WriteLine("You dont have to pay Zakah");
-                           goto loop1;
+                           Console.WriteLine("You dont have to pay Zakah");// output massage
+                           goto loop1;// back to the loop to use the program again
                               }
                                  else
                                        {
-                                         result=(float)(silver/gold*100);
-                                          Console.WriteLine("{0}/{1}*100={2}",silver,gold,result);
-                                          goto loop1;
+                                         result=(float)(silver/gold*100); //mathematical operation
+                                          Console.WriteLine("{0}/{1}*100={2}",silver,gold,result);// output massage
+                                          goto loop1;// back to the loop to use the program again
                                            }
              
         }  else
                { 
-                 Console.WriteLine("\n\n\t ERROR ... please try agin"); 
+                 Console.WriteLine("\n\n\t ERROR ... please try agin"); // output massage
                  
-                 goto loop1;
+                 goto loop1;// back to the loop to use the program again
             
                  Console.Read();
                 }
